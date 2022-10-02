@@ -1,20 +1,5 @@
 addEventListener("DOMContentLoaded", ()=>{
-  // 5. El profesor de una materia desea conocer la cantidad de sus alumnos que no tienen derecho al examen de nivelación. Diseñe un pseudocódigo que lea las calificaciones obtenidas en las 5 unidades por cada uno de los 40 alumnos y escriba la cantidad de ellos que no tienen derecho al examen de nivelación.
+  // 6. Un avión que viaja 800 Km/hr. Dispara un proyectil auto impulsado, en el momento del disparo, el avión hace un giro de 90 grados y acelera a 20 mtrs/seg2. El proyectil sigue su curso, acelerando a 10 mtrs./seg2. Diseñe un pseudocódigo que escriba cada segundo, la distancia que separa al avión del proyectil, hasta que estén a 10,000 mtrs. o más.}
 
-  cont=1
-  cantidad=0 
-  while (cont <= 5){
-    cont += 1
-    let n = prompt("Nombre del estudiante:")
-    let c = prompt("¿Tiene derecho al examen?:")
-    
-    if( c == "no" | c == "NO" | c == "No"){
-      console.log(`No tiene derecho al examen de nivelación`)
-      cantidad += 1
-    }
-    else{
-      console.log(`SI tiene derecho al examen de nivelación`)
-    }
-  }
-  console.log(`La cantidad de estudiantes que NO tienen derecho al examen de nivelación es ${cantidad}`)
+  console.log(`I don´t speak taka taka :v `)
 })
