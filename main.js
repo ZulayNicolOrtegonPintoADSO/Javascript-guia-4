@@ -1,49 +1,40 @@
 addEventListener("DOMContentLoaded", ()=>{
-  //11. El Depto. de Seguridad Pública y Transito de desea saber de los n autos que entran a la ciudad de Bogotá, cuantos entran con calcomanía de cada color. Conociendo el último dígito de la placa de cada automóvil se puede determinar el color de la calcomanía utilizando la sig. Relación: DÍGITO COLOR 1 o 2 amarilla 3 o 4 rosa 5 o 6 roja 7 o 8 verde 9 o 0 azul
+  //12. Diseñe un algoritmo que determine el resultado de la elección del representante estudiantil de la universidad X, para ello se presentaron tres candidatos A, B, y C. Para ganar la elección se debe obtener como mínimo el 51%. En caso que no haya un ganador se repite la elección en una segunda vuelta. Van a la segunda vuelta los dos candidatos que obtengan la más alta votación.Se anula la elección en caso de producirse un empate doble por el segundo lugar o un empate triple.
 
-  i=1
-  a=0
-  ros=0
-  roj=0
-  v=0
-  az=0
-  veh= int(input("Escriba la cantidad de carros que desea registrar"))
+ let a = Number(prompt("CANTIDAD DE VOTOS DEL CANDIDATO A :"))
+ let b = Number(prompt("CANTIDAD DE VOTOS DEL CANDIDATO B :"))
+ let c = Number(prompt("CANTIDAD DE VOTOS DEL CANDIDATO C :"))
 
-  while i <= veh:
-      placa=int(input("A continuación escriba el último dígito de la placa: "))
+ cv=a+c+b
+ console.log(`Cantidad de votos en total = ${cv}`)
+ pa=a/cv
+ pb=b/cv
+ pc=c/cv
+ console.log(`Porcentaje a = ${pa} \n Porcentaje b = ${pb} \n Porcentaje c = ${pc}`)
 
-      if placa == 1 or placa == 2:
-          print("La placa es de color AMARILLO")
-          a += 1
-          i += 1
-      
-      if placa == 3 or placa == 4:
-          print("La placa es de color ROSADO")
-          ros += 1
-          i += 1
-        
-      if placa == 5 or placa == 6:
-          print("La placa es de color ROJO")
-          roj += 1
-          i += 1
-      
-      if placa == 7 or placa == 8:
-          print("La placa es de color VERDE")
-          v += 1
-          i += 1
-      
-      if placa == 9 or placa == 0:
-          print("La placa es de color AZUL")
-          az += 1
-          i += 1
+ if(pa == pb & pa == pc){
+   console.log(`ANULADA LA ELECCIÓN POR TRIPLE EMPATE`)
+ }
+ else{
+   if(pa == pb & pa == pc){
+     console.log(`El candidato A es el ganador`)
+   }
+   if(pb > 0.51){
+     console.log(`El candidato B es el ganador`)  
+   }
+   if(pc > 0.51){
+     console.log(`El candidato C es el ganador`) 
+   }
 
-
-  print("La cantidad de autos registrados fueron:" , veh)
-  print("RESULTADOS:  ")
-  print("La cantidad de autos de color AMARILLO son:" , a)
-  print("La cantidad de autos de color ROSADO son:" , ros)
-  print("La cantidad de autos de color ROJO son:" , roj )
-  print("La cantidad de autos de color VERDE son:" , v )
-  print("La cantidad de autos de color AZUL son:" , az)
+   if(pa == pb){
+     console.log(`ANULADO por empate entre los candidatos A y B`) 
+   }
+   if(pa == pc){
+     console.log(`ANULADO por empate entre los candidatos A y C`) 
+   }
+   if(pb == pc){
+     console.log(`ANULADO por empate entre los candidatos B y C`) 
+   }
+ }
 
 })
