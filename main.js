@@ -1,54 +1,49 @@
 addEventListener("DOMContentLoaded", ()=>{
-  //10. Se está realizando un estudio del tráfico en una de las calles de su ciudad. Para ello deberá controlar durante un cierto tiempo los vehículos que pasan por dicha calle. Los distintos tipos de vehículo será: Turismo, Autobús, Camión o Motocicleta. Además, si el tipo de vehículo es Turismo debe anotar el número de ocupantes. El programa deberá contar 200 vehículos, e ir guardando cuantos pasan de cada tipo. Finalmente mostrará el porcentaje de cada uno de los tipos.
+  //11. El Depto. de Seguridad Pública y Transito de desea saber de los n autos que entran a la ciudad de Bogotá, cuantos entran con calcomanía de cada color. Conociendo el último dígito de la placa de cada automóvil se puede determinar el color de la calcomanía utilizando la sig. Relación: DÍGITO COLOR 1 o 2 amarilla 3 o 4 rosa 5 o 6 roja 7 o 8 verde 9 o 0 azul
 
-  i=0
-  t=0
+  i=1
   a=0
-  c=0
-  m=0
+  ros=0
+  roj=0
+  v=0
+  az=0
+  veh= int(input("Escriba la cantidad de carros que desea registrar"))
 
-  while (i < 201){
-      console.log("Los distintos tipos de vehículo será: 1)Turismo, 2)Autobús, 3)Camión o 4)Motocicleta.")
-      tipo=int(input())
+  while i <= veh:
+      placa=int(input("A continuación escriba el último dígito de la placa: "))
 
-      if (tipo==1){
-        console.log("ESCOGIÓ LA OPCIÓN TURISMO")
-        t += 1 
-        i += 1
-        console.log(" La cantidad de vehículos de esta categoria que van hasta el momento son: " , t)
-      }
-      if (tipo==2){
-        console.log("ESCOGIÓ LA OPCIÓN AUTOBÚS")
-        a += 1 
-        i += 1
-        console.log(" La cantidad de vehículos de esta categoria que van hasta el momento son: " , a)
-      }
-      if (tipo==3){
-        console.log("ESCOGIÓ LA OPCIÓN CAMIÓN")
-        c += 1 
-        i += 1
-        console.log(" La cantidad de vehículos de esta categoria que van hasta el momento son: " , c)
-      }
-      if (tipo==4){
-        console.log("ESCOGIÓ LA OPCIÓN MOTOCICLETA")
-        m += 1 
-        i += 1
-        console.log(" La cantidad de vehículos de esta categoria que van hasta el momento son: " , m)
-      }
-      if (tipo < 1 | tipo > 4){
-          console.log("ESA OPCIÓN NO ESTÁ DISPONIBLE")
-      }
-  }
-  pt=t/i*100
-  pa=a/i*100
-  pc=c/i*100
-  pm=m/i*100
+      if placa == 1 or placa == 2:
+          print("La placa es de color AMARILLO")
+          a += 1
+          i += 1
+      
+      if placa == 3 or placa == 4:
+          print("La placa es de color ROSADO")
+          ros += 1
+          i += 1
+        
+      if placa == 5 or placa == 6:
+          print("La placa es de color ROJO")
+          roj += 1
+          i += 1
+      
+      if placa == 7 or placa == 8:
+          print("La placa es de color VERDE")
+          v += 1
+          i += 1
+      
+      if placa == 9 or placa == 0:
+          print("La placa es de color AZUL")
+          az += 1
+          i += 1
 
-  console.log("El porcentaje de vehículos de tipo turismo es:  " , pt)
-  console.log("El porcentaje de vehículos de tipo autobús es:  " , pa)
-  console.log("El porcentaje de vehículos de tipo camión es:  " , pc)
-  console.log("El porcentaje de vehículos de tipo motocicleta es:  " , pm)
 
-  console.log("EJECUTADO CON EXITO")
+  print("La cantidad de autos registrados fueron:" , veh)
+  print("RESULTADOS:  ")
+  print("La cantidad de autos de color AMARILLO son:" , a)
+  print("La cantidad de autos de color ROSADO son:" , ros)
+  print("La cantidad de autos de color ROJO son:" , roj )
+  print("La cantidad de autos de color VERDE son:" , v )
+  print("La cantidad de autos de color AZUL son:" , az)
 
 })
