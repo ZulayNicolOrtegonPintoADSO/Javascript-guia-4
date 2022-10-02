@@ -1,25 +1,40 @@
 addEventListener("DOMContentLoaded", ()=>{
-  //8. Diseñar un pseudocódigo que calcule el promedio ponderado para alumno del ITT. El cálculo se hace de la siguiente forma:
-  // Se multiplica cada calificación por los créditos de cada materia
-  // El resultado anterior se suma con los resultados de todas las materias, por separado se suman los créditos de cada materia y finalmente se divide la suma de todas las materias por sus respectivos créditos, entre la suma de todos los créditos. (materias: Fundamentos, BD y ética).
+  //9. Diseñe un algoritmo que determine el resultado de la elección del representante estudiantil de la universidad X, para ello se presentaron tres candidatos A, B, y C. Para ganar la elección se debe obtener como mínimo el 51%. En caso que no haya un ganador se repite la elección en una segunda vuelta. Van a la segunda vuelta los dos candidatos que obtengan la más alta votación. Se anula la elección en caso de producirse un empate doble por el segundo lugar o un empate triple.
 
-  i=1
-  let a = prompt("Cantidad de alumnos:")
+  let a = Number(prompt("CANTIDAD DE VOTOS DEL CANDIDATO A :"))
+  let b = Number(prompt("CANTIDAD DE VOTOS DEL CANDIDATO B :"))
+  let c = Number(prompt("CANTIDAD DE VOTOS DEL CANDIDATO C :"))
 
-  while (i <= a){
-    i += 1
-    let cal = prompt("Calificación:")
-    let cf = prompt("Crédito matería fundamentos:")
-    let cBD = prompt("Crédito materia BD:")
-    let ce = prompt("Crédito materia ética:")
-    let fundamentos = prompt("Crédito materia fundamentos:")
-    let BD= prompt("nota final materia BD:")
-    let etica = prompt("nota final materia ética:")
-    p1=cal*cf*cBD*ce
-    p2=p1+fundamentos+BD+etica
-    p3=(cf+cBD+ce)/3
+  cv=a+c+b
+  console.log(`Cantidad de votos en total = ${cv}`)
+  pa=a/cv
+  pb=b/cv
+  pc=c/cv
+  console.log(`Porcentaje a = ${pa} \n Porcentaje b = ${pb} \n Porcentaje c = ${pc}`)
 
-    console.log(`R paso 1  ${p1} \n R paso 2 ${p2} \n R paso 3 ${p3}`)
-    
+  if(pa == pb & pa == pc){
+    console.log(`ANULADA LA ELECCIÓN POR TRIPLE EMPATE`)
   }
+  else{
+    if(pa == pb & pa == pc){
+      console.log(`El candidato A es el ganador`)
+    }
+    if(pb > 0.51){
+      console.log(`El candidato B es el ganador`)  
+    }
+    if(pc > 0.51){
+      console.log(`El candidato C es el ganador`) 
+    }
+
+    if(pa == pb){
+      console.log(`ANULADO por empate entre los candidatos A y B`) 
+    }
+    if(pa == pc){
+      console.log(`ANULADO por empate entre los candidatos A y C`) 
+    }
+    if(pb == pc){
+      console.log(`ANULADO por empate entre los candidatos B y C`) 
+    }
+  }
+
 })
