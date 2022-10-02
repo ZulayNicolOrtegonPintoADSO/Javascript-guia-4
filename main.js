@@ -1,19 +1,25 @@
 addEventListener("DOMContentLoaded", ()=>{
-  // 7. Una compañía de seguros tiene contratados a n vendedores. Cada uno hace tres ventas a la semana. Su política de pagos es que un vendedor recibe un sueldo base, y un 10% extra por comisiones de sus ventas. El gerente de su compañía desea saber cuanto dinero obtendrá en la semana cada vendedor por concepto de comisiones por las tres ventas realizadas, y cuanto tomando en cuenta su sueldo base y sus comisiones.
+  //8. Diseñar un pseudocódigo que calcule el promedio ponderado para alumno del ITT. El cálculo se hace de la siguiente forma:
+  // Se multiplica cada calificación por los créditos de cada materia
+  // El resultado anterior se suma con los resultados de todas las materias, por separado se suman los créditos de cada materia y finalmente se divide la suma de todas las materias por sus respectivos créditos, entre la suma de todos los créditos. (materias: Fundamentos, BD y ética).
 
-  cont=1
-  let e = prompt("Cantidad de empleados:")
-  let sueldobase = prompt("Sueldo base:")
-  diezxc=(sueldobase*10)/100
-  comisión=diezxc*3
-  total=sueldobase+comisión
+  i=1
+  let a = prompt("Cantidad de alumnos:")
 
-  while (cont <= e){
-    cont += 1
-    let v1 = prompt("Valor venta 1:")
-    let v2 = prompt("Valor venta 2:")
-    let v3 = prompt("Valor venta 3:")
-    console.log(`El 10% de su sueldo es:  ${diezxc} \n La comisión por sus ventas es: ${comisión} \n El valor total a pagar es: ${total}`)
+  while (i <= a){
+    i += 1
+    let cal = prompt("Calificación:")
+    let cf = prompt("Crédito matería fundamentos:")
+    let cBD = prompt("Crédito materia BD:")
+    let ce = prompt("Crédito materia ética:")
+    let fundamentos = prompt("Crédito materia fundamentos:")
+    let BD= prompt("nota final materia BD:")
+    let etica = prompt("nota final materia ética:")
+    p1=cal*cf*cBD*ce
+    p2=p1+fundamentos+BD+etica
+    p3=(cf+cBD+ce)/3
+
+    console.log(`R paso 1  ${p1} \n R paso 2 ${p2} \n R paso 3 ${p3}`)
     
   }
 })
