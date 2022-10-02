@@ -1,11 +1,11 @@
 addEventListener("DOMContentLoaded", ()=>{
-  // 2. Hacer un algoritmo que al ingresar 2 números por la pantalla y se calcule la suma, resta, multiplicación y división. El proceso debe terminar cuando se hallan realizado 10 procesos (Hacer uso de contadores).
+  // 4. 42 personas toman parte de un baile. Durante la fiesta una dama bailó con 7 caballeros, una segunda dama con 8, una tercera con 9, y así sucesivamente hasta que la última bailó con todos los hombres. Cuantas damas había en el baile?
 
-  cont=0
-  cantidad=10 
-  while (cont < cantidad){
-    let num1 = Number(prompt("Valor de num1:"))
-    let num2 = Number(prompt("Valor de num2:"))
-    console.log(`\n La suma de los dos números es ${num1+num2} \n La resta de los dos números es ${num1-num2} \n La multiplicación de los dos números es ${num1*num2} \n La división de los dos números es ${num1/num2} `)
+  cont=7
+  acum=0
+  while (cont <= 42){
+    cont += 1
+    acum += 1 
   }
-  })
+  console.log(`Habían ${acum} damas en el baile`)
+})
